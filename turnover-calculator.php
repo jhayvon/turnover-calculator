@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       Turnover calculator
  * Description:       Calculating the turnover cost of companies.
- * Version:           1.2
+ * Version:           1.3
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Jhayvon Adelan
@@ -150,7 +150,6 @@ function calculatorFunction(){
             <div class="row">
                 <div class="col px-5">
                     <p class="border-top text-center details">YOUR DETAILS</p>
-                    <p class="border-top text-center details">update</p>
                 </div>
             </div>
             <div class="row">
