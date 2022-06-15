@@ -11,12 +11,12 @@
 
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/Jvon550/turnover-cost-calculator/',
+	'https://github.com/Jvon550/turnover-cost-calculator',
 	__FILE__,
 	'turnover-cost-calculator'
 );
 $myUpdateChecker->setBranch('master');
-$myUpdateChecker->setAuthentication('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');
+
 
 
 // style imports
