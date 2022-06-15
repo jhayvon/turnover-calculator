@@ -13,7 +13,8 @@
 // style imports
 function themeslug_enqueue_style() {
     wp_enqueue_style( 'bootstrap', plugins_url('/bootstrap/css/bootstrap.css', __FILE__), false );
-    wp_enqueue_style( 'my-style', plugins_url('/assets/mystyle.css', __FILE__), false, '1.0.0', 'all' );
+    // wp_enqueue_style( 'my-style', plugins_url('/assets/mystyle.css', __FILE__), false, '1.0.0', 'all' );
+    wp_enqueue_style( 'my-style', plugins_url('/assets/mystyle.css?time=', __FILE__).time(), [], false );
 }
 add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_style' );
 add_action('showForm', 'showInterface');
