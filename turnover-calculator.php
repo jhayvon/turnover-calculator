@@ -9,14 +9,6 @@
  * Author:            Jhayvon Adelan
  */
 
-require 'plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/Jvon550/TCC/',
-	__FILE__,
-	'TCC'
-);
-$myUpdateChecker->getVcsApi()->enableReleaseAssets();
-
 
 // style imports
 function themeslug_enqueue_style() {
