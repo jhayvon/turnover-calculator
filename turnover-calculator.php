@@ -16,7 +16,6 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'turnover-calculator'
 );
 $myUpdateChecker->setBranch('master');
-$myUpdateChecker->getVcsApi()->enableReleaseAssets();
 
 
 // style imports
@@ -151,6 +150,7 @@ function calculatorFunction(){
             <div class="row">
                 <div class="col px-5">
                     <p class="border-top text-center details">YOUR DETAILS</p>
+                    <p class="border-top text-center details">update</p>
                 </div>
             </div>
             <div class="row">
