@@ -15,8 +15,7 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	__FILE__,
 	'turnover-cost-calculator'
 );
-$myUpdateChecker->setBranch('master');
-
+$myUpdateChecker->getVcsApi()->enableReleaseAssets();
 
 
 // style imports
