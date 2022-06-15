@@ -11,9 +11,9 @@
 
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/Jvon550/turnover-cost-calculator',
+	'https://github.com/Jvon550/TCC/',
 	__FILE__,
-	'turnover-cost-calculator'
+	'TCC'
 );
 $myUpdateChecker->getVcsApi()->enableReleaseAssets();
 
