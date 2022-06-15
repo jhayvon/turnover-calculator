@@ -9,13 +9,16 @@
  * Author:            Jhayvon Adelan
  */
 
-require 'plugin-update-checker/plugin-update-checker.php';
+// require 'plugin-update-checker/plugin-update-checker.php';
+require dirname(__FILE__) .'plugin-update-checker/plugin-update-checker.php';
+// require plugins_url('plugin-update-checker/plugin-update-checker.php', __FILE__);
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/Jvon550/turnover-calculator.git',
 	__FILE__,
-	'turnover calculator'
+	'turnover-calculator'
 );
 $myUpdateChecker->setBranch('master');
+$myUpdateChecker->getVcsApi()->enableReleaseAssets();
 
 
 // style imports
