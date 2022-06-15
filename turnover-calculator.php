@@ -16,6 +16,7 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'turnover-calculator'
 );
 $myUpdateChecker->setBranch('master');
+$myUpdateChecker->setAuthentication('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');
 
 
 // style imports
