@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       Turnover calculator
  * Description:       Calculating the turnover cost of companies.
- * Version:           1.0
+ * Version:           1.1
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Jhayvon Adelan
@@ -17,10 +17,10 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 );
 
 //Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('stable-branch-name');
+$myUpdateChecker->setBranch('master');
 
 //Optional: If you're using a private repository, specify the access token like this:
-$myUpdateChecker->setAuthentication('your-token-here');
+// $myUpdateChecker->setAuthentication('your-token-here');
 
 // style imports
 function themeslug_enqueue_style() {
