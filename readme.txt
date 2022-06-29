@@ -2,7 +2,7 @@
 Contributors: (this should be a list of wordpress.org userid's)
 Donate link: https://example.com/
 Tags: tag1, tag2
-Requires at least: 2.4
+Requires at least: 3.0
 Tested up to: 2.2
 Stable tag: 2.1
 Requires PHP: 7.0

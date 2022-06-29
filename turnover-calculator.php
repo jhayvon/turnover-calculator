@@ -170,7 +170,7 @@ function calculatorFunction(){
             </div>
             <div class="row px-5">
                 <label>CURRENCY</label>
-                <select id="currency" name="currency" style="width: 30%" onchange="changeCurrency()">
+                <select class="form-select" id="currency" name="currency" style="width: 30%" onchange="changeCurrency()">
                     <option value="1" selected>$ USD</option>
                     <option value="0">€ EURO</option>
                 </select>
