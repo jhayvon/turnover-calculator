@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       Turnover calculator
  * Description:       Calculating the turnover cost of companies.
- * Version:           1.2
+ * Version:           2.4
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Jhayvon Adelan
