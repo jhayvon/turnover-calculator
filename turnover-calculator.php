@@ -9,8 +9,14 @@
  * Author:            Jhayvon Adelan
  */
 
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/Jvon550/turnover-calculator/',
+	__FILE__,
+	'Turnover calculator'
+);
+$myUpdateChecker->setBranch('master');
 
-// style imports
 function themeslug_enqueue_style() {
     wp_enqueue_style( 'bootstrap', plugins_url('/bootstrap/css/bootstrap.css', __FILE__), false );
     wp_enqueue_style( 'my-style', plugins_url('/assets/mystyle.css?time=', __FILE__).time(), [], false );
@@ -81,16 +87,14 @@ function showInterface() {
         function set_html_content_type() {
             return 'text/html';
         }
-        // $logo = plugin_dir_url( __DIR__ )."turnover-calculator/assets/logo.png";
-        //myemail
         $subject = "Beaconforce Turnover Cost Calculator";
-        $body = '<div>';
-        $body .= '<p>Hello '.$fName.',</p>';
+        $body = '<p>Hello '.$fName.',</p>';
         $body .= '</br></br>';
         $body .= '<p>Thank you for using Beaconforce turnonver cost calculator. The turnonver cost of '.$comName.' company is <b>'.$currency.$result.'</b></p>';
         $body .= '</br></br>';
         $body .= '<p> This is a system-generated email. Please do not reply.</p>';
-        $body .= '</div>';
+
+
         wp_mail($comEmail, $subject , $body);
 
         unset( $_POST["fName"], $_POST["lName"], $_POST["comName"], $_POST["comEmail"], $_POST["x"], $_POST["z"], $_POST["y"], $_POST["v"], $_POST["b"], $_POST["n"]);
@@ -104,7 +108,7 @@ add_shortcode('wporg', 'wporg_shortcode');
 function wporg_shortcode( $atts = [], $content = null) {
     do_action('showForm');
 }
-//mymain
+
 function calculatorFunction(){
     ?>
     
@@ -170,7 +174,6 @@ function calculatorFunction(){
                     <option value="1" selected>$ USD</option>
                     <option value="0">€ EURO</option>
                 </select>
-                <!-- <input type="text" name="currency" id="currency" disabled value="$ USD (default)" class="rounded border input-text" style="width: 150px"> -->
             </div>
             <div class="row">
                 <div class="col px-5">
@@ -207,7 +210,7 @@ function calculatorFunction(){
     </div>
     <script>
             function mysetval(val, id) {
-                let result = Number(val).toLocaleString(); // "1,234,567,890"
+                let result = Number(val).toLocaleString();
                 document.getElementById(id).innerHTML = result;
                 console.log(result);
             }
