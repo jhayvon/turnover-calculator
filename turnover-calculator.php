@@ -11,7 +11,7 @@
 
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/Jvon550/turnover-calculator/',
+	'https://github.com/jhayvon/turnover-calculator/',
 	__FILE__,
 	'Turnover calculator'
 );
